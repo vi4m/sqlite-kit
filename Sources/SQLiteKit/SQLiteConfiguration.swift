@@ -28,7 +28,7 @@ public struct SQLiteConfiguration: Sendable {
         /// absolute paths whenever possible.
         ///
         /// - Parameter path: The filesystem path at which to store the database.
-        case file(path: String)
+        case file(path: String, readonly: Bool = false)
     }
     
     /// The storage type for the database.

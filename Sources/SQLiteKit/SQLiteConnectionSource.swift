@@ -88,7 +88,7 @@ fileprivate extension SQLiteConfiguration.Storage {
             
             return FileManager.default.temporaryDirectory
                 .appendingPathComponent(tempFilename.asSafeFilename, isDirectory: false)
-        case .file(path: let path):
+        case .file(path: let path, _ ):
             if path.starts(with: "file:"), let url = URL(string: path) {
                 return url
             } else {
